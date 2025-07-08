@@ -13,3 +13,10 @@ def send_signal(room, device, lst_color_code, status):
         node.update({
             'status': status
         })
+
+
+def send_url(url):
+    node = db.reference('smart_home_assistant/virtual_assistant')
+    node.update({
+        'response': url,
+    })
